@@ -7,7 +7,7 @@ class TestHandler(BaseHandler):
     def get(self, *args, **kwargs):
         name = self.get_argument('name')
         print(name)
-        print(str(self.request))
+        print(str(self.request.uri))
         self.message = name
 
         self.send_error(200)

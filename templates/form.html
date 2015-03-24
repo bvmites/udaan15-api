@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Event Registration</title>
+
+	<style type="text/css">
+		.container{
+			width: 100%;
+			height: 100%;
+			margin: 5% 20% auto;
+		}
+
+        .manager1, .manager2, .manager3, .manager4{
+            display: inline;
+        } 
+
+        textarea {
+        	display: inline-block;
+        }
+
+	</style>
+
+	<script type="text/javascript">
+		function validator() {
+            var form = document.forms[0];
+
+            if(form.elements[0].value == "")
+            {
+                alert("Please enter name !!!");
+                return false;
+            }
+
+            if(form.elements[1].value == "")
+            {
+                alert("Please enter department !!!");
+                return false;
+            }
+
+            if(form.elements[3].value == "")
+            {
+                alert("Please enter description !!!");
+                return false;
+            }
+		}
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<form action="../../api/registration/events" method="post" onsubmit="return validator()">
+			Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="text" name="name" size="25"><br><br>
+
+			Department:
+			<input type="text" name="department" size="25"><br><br>
+
+			Type: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<select name="type">
+			<option value="tech">Tech</option>
+			<option value="non-tech">Non-Tech</option>
+			</select><br><br>	
+
+            Description:
+			<textarea name="description" rows="10" cols="25"></textarea><br><br>
+
+            Participants:
+            <input type="number" name="participants"><br><br>
+
+            Fees: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="number" name="fees"><br><br>
+
+            Prize: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="text" name="prize"><br><br>
+
+            Manager Details: <br><br>
+
+            Name:
+            <input type="text" name="manager1-name" class="manager1">
+            Phone:
+            <input type="text" name="manager1-phone" class="manager1">
+            E-mail:
+            <input type="text" name="manager1-email" class="manager1"><br><br>
+
+            Name:
+            <input type="text" name="manager2-name" class="manager2">
+            Phone:
+            <input type="text" name="manager2-phone" class="manager2">
+            E-mail:
+            <input type="text" name="manager2-email" class="manager2"><br><br>
+
+            Name:
+            <input type="text" name="manager3-name" class="manager3">
+            Phone:
+            <input type="text" name="manager3-phone" class="manager3">
+            E-mail:
+            <input type="text" name="manager3-email" class="manager3"><br><br>
+
+            Name:
+            <input type="text" name="manager4-name" class="manager4">
+            Phone:
+            <input type="text" name="manager4-phone" class="manager4">
+            E-mail:
+            <input type="text" name="manager4-email" class="manager4"><br><br>
+
+            <input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

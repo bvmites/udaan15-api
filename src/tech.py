@@ -39,7 +39,7 @@ class TechHandler(BaseHandler):
             db = HandleDoc('tech', query_dict)
             db.get_query()
             db.run_query()
-            if db.doc is None:
+            if str(db.doc) == '[]':
                 self.send_error(404)
             else:
                 self.message = list()

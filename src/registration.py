@@ -4,6 +4,10 @@ from src.basehandler import BaseHandler
 import os.path
 import couch
 
+
+url = "http://172.31.39.221:8000"
+
+
 class EventsRegistrationHandler(BaseHandler):
     def get(self, *args, **kwargs):
         self.render(self.root + '/templates/form.html')
@@ -22,12 +26,11 @@ class EventsRegistrationHandler(BaseHandler):
             data['manager'] = [manager1, manager2, manager3, manager4]
             data['fees'] = self.get_argument('fees')
             data['numberOfParticipants'] = self.get_argument('participants')
-            str(data['name']).replace(' ', '-')
+            data['name'] = str(data['name']).replace(' ', '-')
             db_name = self.get_argument('type')
             db = couch.BlockingCouch(db_name, "http://admin:admin@127.0.0.1:5984")
             db.save_doc(data)
-            self.message = str(data)
-            self.send_error(200)
+            self.redirect(url+'/api/registration/events')
         except Exception as error:
             print(error)
             self.send_error(400)

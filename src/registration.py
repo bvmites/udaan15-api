@@ -5,7 +5,7 @@ import os.path
 import couch
 
 
-url = "http://172.31.39.221:8000"
+url = "http://54.68.178.15:8000"
 
 
 class EventsRegistrationHandler(BaseHandler):

@@ -23,12 +23,10 @@ class EventsRegistrationHandler(BaseHandler):
             data['fees'] = self.get_argument('fees')
             data['numberOfParticipants'] = self.get_argument('participants')
             str(data['name']).replace(' ', '-')
-            if self.get_argument('type') is 'Tech':
-                db_name = 'tech'
-            else:
-                db_name = 'non-tech'
+            db_name = self.get_argument('type')
             db = couch.BlockingCouch(db_name, "http://admin:admin@127.0.0.1:5984")
             db.save_doc(data)
+            self.message = str(data)
             self.send_error(200)
         except Exception as error:
             print(error)

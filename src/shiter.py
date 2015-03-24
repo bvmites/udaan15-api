@@ -26,7 +26,8 @@ for doc in docs:
     new_doc['description'] = uuid.uuid4().hex
     new_doc['managers'] = list()
     for i in range(0,4):
-        new_doc['managers'].append(uuid.uuid4().hex[0:8])
+        manager = dict(name=uuid.uuid4().hex[0:5], phone_no=str(uuid.uuid4().int)[0:10], email=uuid.uuid4().hex[0:10])
+        new_doc['managers'].append(manager)
     new_doc['fee'] = str(uuid.uuid4().int)[0:2]
     new_doc['prize'] = str(uuid.uuid4().int)[0:2]
     new_doc['numberOfParticipants'] = str(uuid.uuid4().int)[0:1]

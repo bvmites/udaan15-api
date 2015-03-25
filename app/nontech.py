@@ -6,7 +6,6 @@ from app.handledoc import HandleDoc
 
 class NonTechHandler(BaseHandler):
     def get(self, *args, **kwargs):
-        print(self.request)
         slugs = str(self.request.uri).lstrip('/').rstrip('/').split('/')
         slugs.remove('api')
         slugs.remove('nontech')

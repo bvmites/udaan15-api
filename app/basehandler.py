@@ -4,23 +4,20 @@ from tornado.web import RequestHandler
 from os.path import dirname
 import traceback
 import json
-import pickle
 
-
-def getTimestamp():
-    try:
-        with open("timestamp.pickle", "rb") as timestamp:
-            return pickle.load(timestamp)
-    except IOError as error:
-        return None
 
 class BaseHandler(RequestHandler):
 
-    timestamp = None
+    try:
+        logfile = open('.log', 'w')
+    except IOError as error:
+        print("Couldnt open log file")
+
     root = dirname(__file__).rstrip('/app')
     localhost = 'http://admin:admin@127.0.0.1:5984/'
 
     def initialize(self):
+        BaseHandler.logfile.write(self.request.uri + " " + self.request.remote_ip + '\n')
         self.message = ''
 
     def write_error(self, status_code, **kwargs):

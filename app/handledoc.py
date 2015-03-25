@@ -15,7 +15,6 @@ class HandleDoc():
         self.client = BlockingCouch(self.db_name, self.url)
         self.query_string = ""
         self.doc = ''
-        self.loop = ''
 
     def get_query(self):
         self.query_string = 'function(doc)'
@@ -50,14 +49,4 @@ class HandleDoc():
 
     def length(self):
         return self.doc.__len__()
-
-if __name__ == '__main__':
-    data = dict()
-    data['name'] = 'CP/IT'
-    data['alias'] = 'KeyCoders'
-    a = HandleDoc('departments')
-    a.get_query()
-    print(a.query_string)
-    a.run_query()
-    print(a.doc)
 

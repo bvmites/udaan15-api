@@ -31,8 +31,8 @@ class TechHandler(BaseHandler):
                 db.run_query()
                 db.get_data()
                 self.message = list()
-                for doc in db.doc['value']:
-                    self.message.append(doc)
+                for doc in db.doc:
+                    self.message.append(doc['value'])
                 self.send_error(200)
             else:
                 query_dict = dict(department=slugs.pop())

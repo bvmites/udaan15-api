@@ -17,7 +17,7 @@ def getTimestamp():
 class BaseHandler(RequestHandler):
 
     timestamp = None
-    root = dirname(__file__).rstrip('/src')
+    root = dirname(__file__).rstrip('/app')
     localhost = 'http://admin:admin@127.0.0.1:5984/'
 
     def initialize(self):

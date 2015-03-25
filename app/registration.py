@@ -1,16 +1,17 @@
 __author__ = 'alay'
 
-from src.basehandler import BaseHandler
+from app.basehandler import BaseHandler
 import os.path
 import couch
 
 
-url = "http://54.68.178.15:8000"
+# url = "http://54.68.178.15:8000"
+url = "http://127.0.0.1:8000"
 
 
 class EventsRegistrationHandler(BaseHandler):
     def get(self, *args, **kwargs):
-        self.render(self.root + '/templates/form.html')
+        self.render(self.root + '/public/form.html')
 
     def post(self, *args, **kwargs):
         try:

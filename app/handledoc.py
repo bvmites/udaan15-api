@@ -40,8 +40,16 @@ class HandleDoc():
             self.doc = None
 
     def get_view(self, doc_name, view_name):
-        self.doc = self.client.view(doc_name, view_name)
+        self.doc = self.client.view(doc_name, view_name)['rows']
 
+    def get_data(self):
+        for doc in self.doc:
+            del doc['id']
+            del doc['value']['_id']
+            del doc['value']['_rev']
+
+    def length(self):
+        return self.doc.__len__()
 
 if __name__ == '__main__':
     data = dict()

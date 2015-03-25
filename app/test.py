@@ -1,6 +1,6 @@
 __author__ = 'alay'
 
-from src.basehandler import BaseHandler
+from app.basehandler import BaseHandler
 
 class TestHandler(BaseHandler):
 

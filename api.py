@@ -12,8 +12,8 @@ from tornado.ioloop import IOLoop
 from tornado.httpclient import AsyncHTTPClient
 
 
-# serverIP = "172.31.39.221"
-serverIP = "127.0.0.1"
+serverIP = "172.31.39.221"
+# serverIP = "127.0.0.1"
 
 
 app = Application(handlers=[

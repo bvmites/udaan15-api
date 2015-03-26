@@ -16,8 +16,8 @@ class IndexHandler(BaseHandler):
     def get(self, *args, **kwargs):
         self.render(self.root + '/public/index.html')
 
-# serverIP = "172.31.39.221"
-serverIP = "127.0.0.1"
+serverIP = "172.31.39.221"
+# serverIP = "127.0.0.1"
 
 
 app = Application(handlers=[

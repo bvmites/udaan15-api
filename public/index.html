@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Udaan'15</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="keywords" content="Udaan15,Bvm,techfest" /> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>	
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/udaanbackground.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/smartphone_checker.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<!--[if lte IE 8]>
+			 <link rel="stylesheet" type="text/css" href="css/simple.css" />
+		<![endif]-->
+		<style>
+#days {
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;	
+  font-size: 70px;
+  color: #db4844;
+}
+#hours {
+  display: inline-block;
+  line-height: 1;
+  padding: 40px;	
+  font-size: 25px;
+  color: #f07c22;
+}
+#minutes {
+display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 20px;
+  color: #f6da74;
+}
+#seconds {
+display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 15px;
+  color: #abcd58;
+}
+
+
+
+span {
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+</style>
+<script>
+function makeTimer() {
+
+			var endTime = new Date("April 08, 2015 02:31 :00 GMT");			
+			var endTime = (Date.parse(endTime)) / 1000;
+
+			var now = new Date();
+			var now = (Date.parse(now) / 1000);
+
+			var timeLeft = endTime - now;
+
+			var days = Math.floor(timeLeft / 86400); 
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+			if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+
+			if(timeLeft< "0")
+			{
+			$("#days").html("The ");
+			$("#hours").html( "Euphoric");
+			$("#minutes").html( "Leap");
+			$("#seconds").html( "Begins");		
+            }
+			else
+			{
+				$("#days").html(days + "<span>Days</span>");
+				$("#hours").html(hours + "<span>Hours</span>");
+				$("#minutes").html(minutes + "<span>Minutes</span>");
+				$("#seconds").html(seconds + "<span>Seconds</span>");		
+	
+			}
+				
+
+	}
+
+	setInterval(function() { makeTimer(); }, 1000);
+</script>
+    </head>
+    <body >
+        <div class="container" style="background:#fff;">			
+			<div class="u-container">
+				<input type="radio" name="radio-set"  id="u-control-1"/>
+				<a href="#u-panel-1">Non Tech</a>
+				<input type="radio" name="radio-set" id="u-control-2"/>
+				<a href="#u-panel-2">Machinists</a>
+				<input type="radio" name="radio-set" id="u-control-3"/>
+				<a href="#u-panel-3">Fab Facturers</a>
+				<input type="radio" name="radio-set" id="u-control-4"/>
+				<a href="#u-panel-4">Sky Scrappers</a>
+				<input type="radio" name="radio-set" checked="checked"id="u-control-5"/>
+				<a href="#u-panel-5">Home</a>
+				<input type="radio" name="radio-set" id="u-control-6"/>
+				<a href="#u-panel-6">Rezonizers</a>
+				<input type="radio" name="radio-set" id="u-control-7"/>
+				<a href="#u-panel-7">Key Coders</a>
+				<input type="radio" name="radio-set"  id="u-control-8"/>
+				<a href="#u-panel-8" >Embeddrones</a>
+				<input type="radio" name="radio-set"  id="u-control-9"/>
+				<a href="#u-panel-9" >Apex Team</a>
+				<input type="radio" name="radio-set"  id="u-control-10"/>
+				<a href="#u-panel-10" >Web Team</a>
+				<div class="u-scroll">
+						
+					
+					<div class="u-panel" id="u-panel-1" style="background:#1b2735;">
+					<div id='stars'></div>
+					<div id='stars2'></div>
+					<div id='stars3'></div>
+						<div class="u-deco" data-icon="Non-tech"></div>
+						<div><img src="Logos/Logo.png" /></div>
+						<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content" >
+				<h3>Trio-Mania</h3>
+				<div>
+					<p>A nontech event that will entrain and examine the wit ,agility and endurance of the participants</p>
+					<ul>
+						<li><strong>Round1</strong> Quiz related to clock puzzles,missing letter puzzles etc.</li>
+						<li><strong>Round2</strong> TEEN KA TIGDA...3 games based on physical abilities.The following three events will have to be performed simultaneously with each of them performing one:</li>
+						<li><strong></strong>1st: Dog and bone<br>2nd Flour blowing<br>3rd Drop the glass</li>
+						<li><strong>Round3</strong> Follow the card t find the ball.Crack the clues to get to the golden ball.</li>
+						<li><strong>Round4</strong>Surprise Round checking your creativity and practical persistence</li>
+						<li><strong>Team:</strong>3 members per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Dhurvisha Chauhan-860676512<br>Vishwa Sejapal 8487910111</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-2" id="modal-2" >
+			<div class="md-content"  >
+				<h3>Game Of Thorns</h3>
+				<div>
+					<p>Winner takes the kingdom!!.</p>
+					<ul>
+						<li><strong>Round1</strong>Tik Tok Move:The round has four tasks which will be surprise.All the task are light and dull of fun.The teams who cant complete the task in required time,will be eliminated.</li>
+						<li><strong>Round2</strong>A wild and exciting adventures tasks in store.A second elimination round where the team completes task in less time goes through.</li>
+						<li><strong>Round3</strong>The team qualifying for final round will be chained together and the key opening the chain will be thrown in the mud along with set of keys.CANDIATES are requested to bring extra clothing's or dress accordingly.</li>
+						<li><strong>Team:</strong>2 members per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Nidhi-8128981469<br>Nirali 7405494052<br>Sohil Parikh 8866417741</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-3" id="modal-3">
+			<div class="md-content">
+				<h3>Guru</h3>
+				<div>
+					<p>This is an extensive test of participants' potency to persuade people,also their presence of mind and their gut reactions.</p>
+					<ul>
+						<li><strong>Round1</strong>The first round examines the participants marketing and persuasions tactics.Here they are supposed to perform jobs within the college campus to earn money.</li>
+						<li><strong>Round2</strong>This round test their biding instincts.The teams here are given virtual money for which they have to place on participant likely winning chances and gain money.</li>
+						<li><strong>Team:</strong>2 members per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Loksh Chauhan-9033541325<br>Nimesh Vaghela 9601122850</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-4" id="modal-4">
+			<div class="md-content">
+				<h3>Student of the Year</h3>
+				<div>
+					<p>A event where all skill of student are checked in non technical aspect !!</p>
+					<ul>
+						<li><strong>Round1</strong>Analytical,logical and Mental ability reasoning questions will be asked. </li>
+						<li><strong>Round2</strong>Any event from the fun-zone will there which participants need to perform. </li>
+						<li><strong>Round3</strong>Surprise round!!</li>
+						<li><strong>Team</strong>2 members per team</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Dipen Patel-9662563422<br>Sanjay Tomar 9913877947<br>Akshay patel-9033321567<br>Akshay patel-9427915417</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-5" id="modal-5">
+			<div class="md-content">
+				<h3>Let us Be Friends</h3>
+				<div>
+					<p>Are you shy and devoid of friends here is a chance to make friends!!</p>
+					<ul>
+						<li><strong>Round1</strong> A chit system in place where  a team of two will be formed and they will be given time introduce themselves and after that each will be given a form to fill about others.</li>
+						<li><strong>Round2</strong>A blinded folded round where the team member guides the other tea member to accomplish a task.</li>
+						<li><strong>Team:</strong>1 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Libin Lazar-9687848409<br>Rajdeep Ravalji 9429645614</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-6" id="modal-6">
+			<div class="md-content">
+				<h3>Bid the best</h3>
+				<div>
+					<p>The whole event is a bidding event.</p>
+					<ul>
+						<li><strong>Round 1</strong> Head rush a M.c.q based quiz round,where top 30 go to next round and selection will be on marks but they will also be awarded points 100 for write and -50 for wrong answer which will be carried forward.</li>
+						<li><strong>Round 2</strong> A debate round and selection on last round point and presentation ,content,involvement in the round. </li>
+						<li><strong>Round 3</strong>Random team will be formed.One partner will bid  for the image,then he will have to describe the image to his partner within give time .Then his partner will be given to search the image and then to explain it to jury.</li>
+						<li><strong>Team:</strong>1 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Nisarg Pandya-7405390853<br>Mayank Mittal 9428234766</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-7" id="modal-7">
+			<div class="md-content">
+				<h3>Bolly mix bolly</h3>
+				<div>
+					<p>This is a fun no tech event to test your interest of BOlLYWOOD masala world. </p>
+					<ul>
+						<li><strong>Round1</strong>A round on BOlLYWOOD quiz.</li>
+						<li><strong>Round2</strong>In this round, one team member of each team will be shown a picture of famous star which he/she should require to impersonate and other required to identify its a elimination round.</li>
+						<li><strong>Round3</strong>In this round Antakshari will be organized among teams.</li>
+						<li><strong>Round4</strong> It will be a surprise round.</li>
+						<li><strong>Team</strong> 3 per team.</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Jenil Desai-9510042441<br>Sachin Chosaria 9714384427<br>Mansi Panchal 9898771371</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+			
+		</div>
+		<div class="md-modal md-effect-8" id="modal-8">
+			<div class="md-content">
+				<h3>Lan Gaming</h3>
+				<div>
+					<p>This is a group of gaming events comprising of FIFA,NFS and Call of Duty</p>
+					<ul>
+						<li><strong>General</strong> For COD team of 3 is must and COD 4 modern warfare will be used and FIFA14 ,NFS Most Wanted </li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Rushi Doshi-8866800531<br>Yash Sonani 9725599099<br>AumDevsinh Zala 787841118</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-9" id="modal-9">
+			<div class="md-content">
+				<h3>Photo shop workshop</h3>
+				<div>
+					<p>An introductory workshop to Adobe Photoshop</p>
+					<ul>
+						<li><strong>Day1</strong>Photoshop basics + Exercises </li>
+						<li><strong>Day2</strong> Photo Retouch Photoshoping (portrait +landscape) and exercises</li>
+						<li><strong>Team:</strong>1 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Karan Darji-8347340418<br>DipenKadecha 886614450</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-10" id="modal-10">
+			<div class="md-content">
+				<h3>Wallstreet</h3>
+				<div>
+					<p>A virtual stock market on PC</p>
+					<ul>
+						<li><strong>General</strong>On the first day of Udaan'15 a on line portal will start.Participants can play from any where and any device from logging with their id and phone no and same will be continued till next day 4 p.m. </li>
+						<li><strong>Team:</strong>1 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Harshit Sanghavi-8905015808<br>Dixit Panchal 8866222569</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-11" id="modal-11">
+			<div class="md-content">
+				<h3>Spell Bee Returns</h3>
+				<div>
+					<p>To check the basic knowledge of English and Vocabulary.</p>
+					<ul>
+						<li><strong>Round1</strong>A quiz on grammar and vocabulary.E.x Identify correct spelling etc</li>
+						<li><strong>Round2</strong>Anagrams and Interesting game of words</li>
+						<li><strong>Team</strong> 2 per team.</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Tapan Shah-8460418070<br>Samir Dani 9428788977</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-13" id="modal-13">
+			<div class="md-content">
+				<h3>BRAINgle</h3>
+				<div>
+					<p>To check the problem solving ability of participants</p>
+					<ul>
+						<li><strong>Round1</strong>Solve Rebus Problem</li><img src="Rebus-Problem.gif"/><br>Answer Cross Roads!!
+						<li><strong>Round2</strong>Solve matchsticks puzzles</li>
+						<li><strong>Round3</strong> Guess the personality</li>
+						<li><strong>Team:</strong>1 member per team maximum</li>
+					</ul>
+						<p><strong>Event Manager:</strong><br>Parashant Sarvaiya-9033530051<br>Utkarsh Dubey 9974074839</p>	
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-14" id="modal-14">
+			<div class="md-content">
+				<h3>Sherlock Holmes</h3>
+				<div>
+					<p>The event can be described as a test of participants wit and logic.Solve the mystery and names of event says it all.</p>
+					<ul>
+						<li><strong>Round1</strong>Put your map reading skills on the test.From the map of campus given to you observe the sites.</li>
+						<li><strong>Round2</strong> The teams will be led to a crime scene by means of clue Hunt with a surprise Twist </li>
+						<li><strong>Round3</strong>This round will be a true test of the sleuthing talent of the participants.Examine the Crime Scene & Solve the murder Mystery </li>
+						<li><strong>Team</strong> 2 per team.</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Kushagra Shah-9998216831<br>Siddhart Ghadse 9687348141<br>Prachi Jhala 9574427142</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-15" id="modal-15">
+			<div class="md-content">
+				<h3>Born Entrepreneurs</h3>
+				<div>
+					<p>Do you have Inner feeling of being a Entrepreneur and also have (or want to build) the convincing skills</p>
+					<ul>
+						<li><strong>Round1</strong>Quiz on business Knowledge</li>
+						<li><strong>Round2</strong>Face the Real World </li>
+						<li><strong>Round3</strong>Sell the Commodities and Earn the Maximum Profits</li>						
+						<li><strong>Team</strong> 2 per team.</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Abhishek Shankar 8866884560<br>Laxit Bhalara 9558904648<br>Jay Vachhrajani 9429925133</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-16" id="modal-16">
+			<div class="md-content">
+				<h3>Mysterious Island</h3>
+				<div>
+					<p>A fun based event.</p>
+					<ul>
+						<li><strong>Round1</strong>The round is quiz based ,where based on answer to questions participants have to go to respected venue and collect logos from there. </li>
+						<li><strong>Round2</strong>Various task need to be performed on campus</li>
+						<li><strong>Round3</strong>Teams need to identify their positions in the given map and the clues will be given to them.They have to find their positions and according to instructions go to the various venues to solve clues.</li>
+						<li><strong>Team:</strong>3 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Manish Khandelwal 7600206336 <br>Raj Desai 9033384910<br>Paulamdesai 8238072552</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-17" id="modal-17">
+			<div class="md-content">
+				<h3>Crazy Cricket</h3>
+				<div>
+					<p>Cricket with crazy rules.Each team will have five members amd match will be of 4 overs.Match will be played on team format.Rules will be mentioned on spot.</p>
+					<li><strong>Team:</strong>1 member per team maximum</li>
+					<p><strong>Event Manager:</strong><br>Harshil Jariwala 9427580010 <br>Krungal Gajera 9879505589<br>Jinnendra Gupta 740533738</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-18" id="modal-18">
+			<div class="md-content">
+				<h3>Win It In Minute</h3>
+				<div>
+					<p>This event contains different fun games.All the games should be performed in 1 minute.There will be four rounds each contain 1 game </p>
+					<ul>
+						<li><strong>Round1</strong>Small pieces of paper are sucked up with a straw from bowl A to bowl B.</li>
+						<li><strong>Round2</strong>In this round one partner will blow the balloon and place it on chair and other partner break the balloon with hands tied up.</li>
+						<li><strong>Round3</strong>Transfer rubber rings from one partner to another partner's straw with using hands and straws are kept in participants mouth. </li>
+						<li><strong>Round4</strong> Surprise Round</li>
+						<li><strong>Team:</strong>2 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Khanjan Kanani 942651939 <br>Dakshesh Saypariya 8866653940<br>Karan Trivedi 9408968744</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-19" id="modal-19">
+			<div class="md-content">
+				<h3>Satodhiyu</h3>
+				<div>
+					<p> It is game where one person is allowed only 3 throws .One person stands behind the pyramid of stones.The pyramid is to be broken and the opposite team needs to hit the other player to make him out of game and vice versa.5 points for first try and -5 points if doesn't hit.</p>	
+					<li><strong>Team:</strong>1 member per team maximum</li>
+					<p><strong>Event Manager:</strong><br>Nirbhay Ramani 9898576767 <br>Akash Shah 9904103307<br>Harish Jariwala 8469193142</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-20" id="modal-20">
+			<div class="md-content">
+				<h3>Treasure Hunt</h3>
+				<div>
+					<p>Participants will be given different types of the clue and they have to solve it in minimum time to get second clue.The one who gets all the clue will be winner.</p>
+					<p>Team: 2 per team</p>
+					<p><strong>Event Managers</strong>Tirth Jani 8866172363<br>Alay Patel 7600647682</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-21" id="modal-21">
+			<div class="md-content">
+				<h3>Sabka Baap</h3>
+				<div>
+					<p>Special event only for girls</p>
+					<ul>
+						<li><strong>Round1</strong>Race Calcula: This is a normal elimination round consisting of quiz where general knowledge, logical skills, basic mathematics will be tested with a twist of solving them with legs of two participants tied together.</li>
+						<li><strong>Round2</strong>Click Chick Click:In this round participating teams will be given materials using which they have to prepare attractive items that can be used for photo booth in a given time constraint. They will then have to install their photo booth anywhere in college premises and earn money by charging the students coming for photography for each photos clicked.The participants will be allowed to carry 5 materials of their own.</li>
+						<li><strong>Round3</strong>Dheeme haanko: Here teams will be asked to perform certain tasks which will be disclosed there itself (surprise round). </li>						
+						<li><strong>Team:</strong>2 member per team maximum</li>
+					</ul>
+					<p><strong>Event Manager:</strong><br>Ruchi Khant:7600030211  <br>Kavina Kulshreshtha:9724128848</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-23" id="modal-23">
+			<div class="md-content">
+				<h3>Fun-e-zone</h3>
+				<div>
+					<p>A set of fun based events on campus.</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-24" id="modal-24">
+			<div class="md-content">
+				<h3>Cover Shot</h3>
+				<div>
+					<p>Capture and show us what and how you see the world around you.</p>
+					<p>IMPORTANT-Round 2 will be preceded by a Photo talk in which basics of photography will be taught,all participants are allowed to attend</p> 
+					<li><strong>Round1</strong>Three Photos based on the listed themes are to mailed on id provided to you.The themes are 1]Symmetry 2]Streets 3]Open call.Photos can be based on any theme. </li>
+					<li><strong>Round2</strong>Surprise round</li>
+					<li><strong>Team:</strong>2 members per team maximum</li>
+					<p><strong>Event Manager:</strong>Hemangi Sharma:96366366306<br>Sagar Mehta:9228299100</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+		<div class="md-modal md-effect-25" id="modal-25">
+			<div class="md-content">
+				<h3>Misc-en-scence</h3>
+				<div>
+					<p>Short film making</p>
+					<p>Maximum of 4 participants and any no of actors can be used.<p>
+					<p>Maximum 10 minutes and minimum 6 minutes </p>
+					<p>Short film should be submitted in mp4 format in a DVD on or before 1pm,8th April.</p>
+					<p>Topics are 1]The nation wants to know.2]A thing called camera3]College life.</p>
+					<p><strong>Event Manager:</strong>Nandish Bhatt 9825854130<br>Mitrayan De Sarkar 812735054</p>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>	
+		<div class="container" style="background:#1b2735; ">
+			
+				<center></center>
+				<center><br><br><h1 class="animated  infinite pulse" style="color:#EE5623; ;">Non Tech Events</h1></center>
+	
+			<div class="main clearfix">
+				<div class="coloum" >
+					<button class="md-trigger" data-modal="modal-1" style="background:#ffdf00;color:black;"><strong>Tri-o-Mania</strong></button>
+					<button class="md-trigger" data-modal="modal-2" style="background:#6843fb;color:black"><strong>Game of thorns</strong></button>
+					<button class="md-trigger" data-modal="modal-3" style="background:#ff0c4e;color:black"><strong>Guru</strong></button>
+					<button class="md-trigger" data-modal="modal-4"style="background:#009e26;color:black" ><strong>Student of the Year</strong></button>
+					<button class="md-trigger" data-modal="modal-5"style="background:#ff9b00;color:black"><strong>Let us be friends</strong></button>
+					<button class="md-trigger" data-modal="modal-6"style="background:#b405cb;color:black"><strong>Bid the best</strong></button>
+					<button class="md-trigger" data-modal="modal-7"style="background:#fa96b5;color:black"><strong>Bolly-mix-bolly</strong></button>
+					<button class="md-trigger" data-modal="modal-8"style="background:#002773;color:black"><strong>Lan Gaming</strong></button>
+					<button class="md-trigger" data-modal="modal-9"style="background:#8ac659;color:black"><strong>Photoshop Workshop</strong></button>
+					<button class="md-trigger" data-modal="modal-10"style="background:#f05b54;color:black"><strong>Wallstreet<strong></button>
+					<button class="md-trigger" data-modal="modal-11"style="background:#009e26;color:black"><strong>Spell Bee Returns</strong></button>
+					<button class="md-trigger" data-modal="modal-13" style="text-decoration:none ;background:#f6933d;color:black"><strong>BRAINgle</strong></button>
+					<button class="md-trigger" data-modal="modal-14"style="background:#23ee56;color:black"><strong>Sherlock Holmes</strong></button>
+					<button class="md-trigger" data-modal="modal-15"style="background:#a63c18;color:black"><strong>Born Entrepreneurs</strong></button>
+					<button class="md-trigger" data-modal="modal-16"style="background:#ff0c4e;color:black"><Strong>Mysterious Island</strong></button>
+					<button class="md-trigger md-setperspective" data-modal="modal-17"style="background:#b405cb;color:black"><strong>Crazzy Cricket</strong></button>
+					<button class="md-trigger md-setperspective" data-modal="modal-18" style="background:#fa96b5;color:black"><strong>WIN IT In MINUTE</strong></button>
+					<button class="md-trigger md-setperspective" data-modal="modal-19" style="background:#a63c18;color:black" ><strong>Satodhiyu</strong></button>
+					<button class="md-trigger" data-modal="modal-20"style="background:#fa96b5;color:black"><strong>Treasure Hunt</strong></button>
+					<button class="md-trigger" data-modal="modal-21"style="background:#23ee56;color:black"><strong>Sabka Baap</strong></button>
+					<button class="md-trigger" data-modal="modal-23"style="background:#a63c18;color:black"><strong>Fun-e-zone</strong></button>
+					<button class="md-trigger" data-modal="modal-24" style="background:#002773;color:black"><strong>Cover shot</strong></button>
+					<button class="md-trigger" data-modal="modal-25" style="background:#ffdf00;color:black"><strong>Short film making</strong></button>
+				</div>				
+			</div>
+			<div class="main clearfix">		
+				</div>
+		</div><!-- /container -->
+		<div class="overlay"></div>
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+					</div>
+					
+					<div class="u-panel" id="u-panel-2" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="Machinists"></div>
+						<img src="Logos/Logo.png" style="height:100px;"/>
+						<h2 class="animated infinite pulse"><img src="Logos/Machinists.png" style="height:200px ;width:200px;margin-top:-50px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#Machinists"style="color:#EE5623;">Machinists</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="Machinists" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe width="860" height="520" src="Machinists.html" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+					</div>
+					
+					<div class="u-panel" id="u-panel-3" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="FabFacturers"></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<h2 class="animated infinite pulse"><img src="Logos/FabFacturers.png" style="height:200px ;width:200px;margin-top:-90px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#FabFacturers"style="color:#EE5623;">FabFacturers</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="FabFacturers" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe width="860" height="520" src="FabFacturers.html" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>	
+					</div>
+					
+					<div class="u-panel " id="u-panel-4" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<h2 class="animated infinite pulse"><img src="Logos/SkyScrapers.png" style="height:200px ;width:200px;margin-top:-90px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#SkyScrapers"style="color:#EE5623;">SkyScrapers</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="SkyScrapers" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe width="860" height="520" src="SkyScrapers.html" frameborder="0" ></iframe>
+								</div>
+							</div>
+					</div>
+					
+					<div class="u-panel" id="u-panel-5" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+				
+						<div class="u-deco" data-icon="Home"></div>
+						<h3 class="animated " style="color:#EE5623;text-align:center;font-size:30px;">Birla Vishvakarma Mahavidyalaya<br>Presents</h3>
+						
+						<h2 class="animated  infinite pulse"><img src="Logos/Logo.png" style="height:150px;margin-top:-50px"/></h2><br>
+						<h3  style="color:#EE5623;text-align:center;font-size:20px;margin-top:250px;"><a href="#home" style="color:#EE5623;">About Udaan</a></h3>
+						<center ><h4><a href="#schedule" style="color:#EE5623">Schedule</a></h4></center>	
+								<center style="margin-top:-40px;"><div id="timer">
+								<div id="days"></div>
+								<div id="hours"></div>
+								<div id="minutes"></div>
+								<div id="seconds"></div></center>
+						<div id="home" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<center><img src="Logos/Logo.png" style="height:50px"/></center>
+									<p>There could not have been a more inspiring name for a tech-fest celebrated with so much grandeur every year. Udaan, a Hindi word means a leap, a journey from where you are now to where you want to reach. It has been 4 consecutive years since "Udaan" has started & we are flying higher than before every time. . Udaan is by all means a projection of leaps of success that BVM takes every year so be the part of this "BVM ki Udaan".</p>
+									<center><p>The Official Video</p></center>
+									<center><iframe width="560" height="315"  src="https://www.youtube.com/embed/HQDITO9-zIM" frameborder="0" ></iframe></center>
+								</div>
+						
+								
+						</div>
+						<div id="schedule" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<center><img src="Logos/Logo.png" style="height:50px"/></center>
+									<p style="font-size:30px;">STAY TUNED</p>
+								</div>
+						</div>
+							
+					</div>		
+					<div class="u-panel" id="u-panel-6" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="Rezonizers"></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<h2 class="animated infinite pulse"><img src="Logos/Rezonizers.png" style="height:200px ;width:200px;margin-top:-90px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#Rezonizers"style="color:#EE5623;">Rezonizers</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="Rezonizers" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe width="860" height="520" src="Rezonizers.html" frameborder="0" ></iframe>
+								</div>
+							</div>	
+					</div>
+					
+					<div class="u-panel" id="u-panel-7" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="KeyCoders"></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<h2 class="animated infinite pulse"><img src="Logos/KeyCoders.png" style="height:200px ;width:200px;margin-top:-90px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#KeyCoders"style="color:#EE5623;">KeyCoders</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="KeyCoders" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe width="860" height="520" src="KeyCoders.html" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						
+					</div>
+					
+					<div class="u-panel" id="u-panel-8" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<h2 class="animated infinite pulse"><img src="Logos/Embeddrones.png" style="height:200px ;width:200px;margin-top:-90px"/></h2>
+						<h3 style="margin-top:300px;text-align:center;font-size:25px;" ><a href="#Embeddrones"style="color:#EE5623;">Embeddrones</a></h3>
+						<br><center><a href="index.html" style="color:#EE5623">Back to home</a><center>
+							<div id="Embeddrones" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<iframe  src="Embeddrones.html" width="860" height="520"frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+							
+					</div>
+					
+					<div class="u-panel" id="u-panel-9" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="Team Udaan"></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<center><h1><img src="apex.png" style="height:450px;width:900px;" /></h1></center>
+					</div>
+					
+					<div class="u-panel" id="u-panel-10" style="background:#1b2735;">
+						<div id='stars'></div>
+						<div id='stars2'></div>
+						<div id='stars3'></div>
+						<div class="u-deco" data-icon="Web team"></div>
+						<div><img src="Logos/Logo.png" style="height:100px;"/></div>
+						<center><h1 style="color:#EE5623;margin-top:-90px">Back End</h1>
+						<p style="font-size:25px;">Alay Patel </p>
+						<h1 style="color:#EE5623">Front end </h1>
+						<p style="font-size:25px;" >Dhruvin Ghandhi,Dixit Panchal,Arvind Iyer</p>
+						<h1 style="color:#EE5623">Android app</h1>
+						<p style="font-size:25px;" >Varun Barot</p>
+						<h1 style="color:#EE5623">Windows app</h1>
+						<p style="font-size:25px;" >Dhruv Suthar</p>
+						<h1 style="color:#EE5623">Graphics Designer</h1>
+						<p style="font-size:25px;" >Yash Mehta</p>
+					</div>
+
+				</div><!-- // st-scroll -->				
+			</div><!-- // st-container -->			
+        </div>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-52439382-2', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

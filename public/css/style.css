@@ -122,12 +122,12 @@
 .u-scroll {
 	top: 0;
 	left: 0;
-	-webkit-transition: all 0.6s ease-in-out;
-	-moz-transition: all 0.6s ease-in-out;
-	-o-transition: all 0.6s ease-in-out;
-	-ms-transition: all 0.6s ease-in-out;
-	transition: all 0.6s ease-in-out;
-	
+	/*-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	-ms-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;*/
+
 	/* Let's enforce some hardware acceleration */
 	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-backface-visibility: hidden;
@@ -232,22 +232,22 @@
 	-webkit-backface-visibility: hidden;
 }
 
-#u-control-1:checked ~ .st-scroll #u-panel-1 h2,
-#u-control-2:checked ~ .st-scroll #u-panel-2 h2,
-#u-control-3:checked ~ .st-scroll #u-panel-3 h2,
-#u-control-4:checked ~ .st-scroll #u-panel-4 h2,
-#u-control-5:checked ~ .st-scroll #u-panel-5 h2
-#u-control-6:checked ~ .st-scroll #u-panel-6 h2
-#u-control-7:checked ~ .st-scroll #u-panel-7 h2
-#u-control-8:checked ~ .st-scroll #u-panel-8 h2
-#u-control-9:checked ~ .st-scroll #u-panel-9 h2
-#u-control-10:checked ~ .st-scroll #u-panel-10 h2
-#u-control-11`:checked ~ .u-scroll #u-panel-11 h2{
-	-webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
-	-moz-animation: moveDown 0.6s ease-in-out 0.2s backwards;
-	-o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
-	-ms-animation: moveDown 0.6s ease-in-out 0.2s backwards;
-	animation: moveDown 0.6s ease-in-out 0.2s backwards;
+#u-control-1:checked ~ .st-scroll #u-panel-1 h2,h3,img,div ,
+#u-control-2:checked ~ .st-scroll #u-panel-2 h2,h3,img,div
+#u-control-3:checked ~ .st-scroll #u-panel-3 h2,h3,img,div
+#u-control-4:checked ~ .st-scroll #u-panel-4 h2,h3,img,div
+#u-control-5:checked ~ .st-scroll #u-panel-5 h2,h3,img,div
+#u-control-6:checked ~ .st-scroll #u-panel-6 h2,h3,img,div
+#u-control-7:checked ~ .st-scroll #u-panel-7 h2,h3,img,div
+#u-control-8:checked ~ .st-scroll #u-panel-8 h2,h3,img,div
+#u-control-9:checked ~ .st-scroll #u-panel-9 h2,h3,img,div
+#u-control-10:checked ~ .st-scroll #u-panel-10 h2,h3,img,div
+#u-control-11`:checked ~ .u-scroll #u-panel-11 h2,h3,img,div{
+	/*-webkit-animation: moveDown .5s ease-in-out .1s backwards;
+	-moz-animation: moveDown .5s ease-in-out .3s backwards;
+	-o-animation: moveDown .5s ease-in-out .1s backwards;
+	-ms-animation: moveDown .5s ease-in-out .3s backwards;
+	animation: moveDown .5s ease-in-out .3s backwards;*/
 }
 @-webkit-keyframes moveDown{
 	0% { 
@@ -307,22 +307,22 @@
 .st-panel p {
 
 }
-#u-control-1:checked ~ .u-scroll #u-panel-1 p,
-#u-control-2:checked ~ .u-scroll #u-panel-2 p,
-#u-control-3:checked ~ .u-scroll #u-panel-3 p,
-#u-control-4:checked ~ .u-scroll #u-panel-4 p,
-#u-control-5:checked ~ .u-scroll #st-panel-5 p
-#u-control-6:checked ~ .u-scroll #st-panel-6 p
-#u-control-7:checked ~ .u-scroll #st-panel-7 p
-#u-control-8:checked ~ .u-scroll #st-panel-8 p
-#u-control-9:checked ~ .u-scroll #st-panel-9 p
-#u-control-10:checked ~ .u-scroll #st-panel-10 p
-#u-control-11`:checked ~ .u-scroll #u-panel-11 p{
-	-webkit-animation: moveUp 0.6s ease-in-out 0.2s backwards;
-	-moz-animation: moveUp 0.6s ease-in-out 0.2s backwards;
-	-o-animation: moveUp 0.6s ease-in-out 0.2s backwards;
-	-ms-animation: moveUp 0.6s ease-in-out 0.2s backwards;
-	animation: moveUp 0.6s ease-in-out 0.2s backwards;
+#u-control-1:checked ~ .u-scroll #u-panel-1 h2,h3,img,div,
+#u-control-2:checked ~ .u-scroll #u-panel-2 h2,h3,img,div
+#u-control-3:checked ~ .u-scroll #u-panel-3 h2,h3,img,div
+#u-control-4:checked ~ .u-scroll #u-panel-4 h2,h3,img,div
+#u-control-5:checked ~ .u-scroll #st-panel-5 h2,h3,img,div
+#u-control-6:checked ~ .u-scroll #st-panel-6 h2,h3,img,div
+#u-control-7:checked ~ .u-scroll #st-panel-7 h2,h3,img,div
+#u-control-8:checked ~ .u-scroll #st-panel-8 h2,h3,img,div
+#u-control-9:checked ~ .u-scroll #st-panel-9 h2,h3,img,div
+#u-control-10:checked ~ .u-scroll #st-panel-10 h2,h3,img,div
+#u-control-11`:checked ~ .u-scroll #u-panel-11 h2,h3,img,div{
+	/*-webkit-animation: moveUp .5s ease-in-out .1 backwards;
+	-moz-animation: moveUp .5s ease-in-out .1 backwards
+	-o-animation: moveUp .5s ease-in-out .1 backwards
+	-ms-animation: moveUp .5s ease-in-out .1 backwards;
+	animation: moveUp .5s ease-in-out .1s backwards;*/
 }
 
 @-webkit-keyframes moveUp{

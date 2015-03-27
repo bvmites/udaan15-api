@@ -8,16 +8,10 @@ import json
 
 class BaseHandler(RequestHandler):
 
-    try:
-        logfile = open('.log', 'w')
-    except IOError as error:
-        print("Couldnt open log file")
-
     root = dirname(__file__).rstrip('/app')
     localhost = 'http://admin:admin@127.0.0.1:5984/'
 
     def initialize(self):
-        BaseHandler.logfile.write(self.request.uri + " " + self.request.remote_ip + '\n')
         self.message = ''
 
     def write_error(self, status_code, **kwargs):

@@ -50,3 +50,6 @@ class HandleDoc():
     def length(self):
         return self.doc.__len__()
 
+    def __del__(self):
+        self.client.close()
+

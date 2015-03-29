@@ -8,7 +8,6 @@ import couch
 url = "http://52.11.203.109:8001"
 # url = "http://127.0.0.1:8000"
 
-
 class EventsRegistrationHandler(BaseHandler):
     def get(self, *args, **kwargs):
         self.render(self.root + '/public/form.html')

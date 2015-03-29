@@ -2,9 +2,12 @@ __author__ = 'alay'
 
 from app.basehandler import BaseHandler
 from app.asynchandledoc import AsyncHandleDoc
+from tornado.gen import coroutine
 
 
 class NonTechHandler(BaseHandler):
+
+    @coroutine
     def get(self, *args, **kwargs):
         slugs = str(self.request.uri).lstrip('/').rstrip('/').split('/')
         slugs.remove('api')

@@ -1,3 +1,5 @@
 .idea/*
 app/__pycache__/*
 .log
+data.txt
+recovery.py

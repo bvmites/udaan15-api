@@ -12,8 +12,8 @@ from tornado.ioloop import IOLoop
 from tornado.httpclient import AsyncHTTPClient
 from tornado.web import StaticFileHandler
 
-# serverIP = "172.31.39.221"
-serverIP = "127.0.0.1"
+serverIP = "172.31.14.41"
+# serverIP = "127.0.0.1"
 
 
 app = Application(handlers=[
@@ -24,5 +24,5 @@ app = Application(handlers=[
 ])
 
 server = HTTPServer(app)
-server.listen(8000, address=serverIP)
+server.listen(8001, address=serverIP)
 ioLoop = IOLoop.instance().start()

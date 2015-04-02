@@ -2,7 +2,6 @@ __author__ = 'alay'
 
 from couch import AsyncCouch
 from tornado.gen import coroutine
-from tornado.ioloop import IOLoop
 from tornado.gen import Future
 
 
@@ -55,6 +54,9 @@ class AsyncHandleDoc():
 
     def length(self):
         return self.doc.__len__()
+
+    def __del__(self):
+        self.client.close()
 
 if __name__ == '__main__':
     a = AsyncHandleDoc("departments")

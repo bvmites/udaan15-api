@@ -16,5 +16,5 @@ class CulturalHandler(BaseHandler):
         client.get_data()
         self.message = list()
         for data in client.doc:
-            self.message.append(data)
+            self.message.append(data['value'])
         self.send_error(200)

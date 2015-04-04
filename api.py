@@ -12,8 +12,8 @@ from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.web import StaticFileHandler
 
-serverIP = "172.31.40.214"
-# serverIP = "192.168.1.3"
+# serverIP = "172.31.40.214"
+serverIP = "192.168.1.3"
 
 app = Application(handlers=[
     (r'/api/registration/events', registration.EventsRegistrationHandler),

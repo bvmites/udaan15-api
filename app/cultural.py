@@ -14,5 +14,7 @@ class CulturalHandler(BaseHandler):
         client.get_query()
         yield client.run_query()
         client.get_data()
-        self.message = client.doc
+        self.message = list()
+        for data in client.doc:
+            self.message.append(data)
         self.send_error(200)
